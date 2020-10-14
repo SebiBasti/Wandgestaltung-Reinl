@@ -87,6 +87,116 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/*Fonts*/
+
+@font-face {
+  font-family: 'FreeSerif';
+  src: url('../fonts/FreeSerif.otf') format('opentype'),
+  url('../fonts/FreeSerif.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'FreeSerifBold';
+  src: url('../fonts/FreeSerifBold.otf') format('opentype'),
+  url('../fonts/FreeSerifBold.ttf') format('truetype');
+}
+
+/*Colors*/
+
+:root {
+  --white: rgb(229,229,229);
+  --grey: rgb(69,69,69);
+}
+
+body {
+  background-color: var(--white);
+}
+
+.content {
+  background-color: var(--white);
+  /*border: 1px dotted black;*/
+  margin: 0 auto;
+  width: 100vw;
+  min-width: 320px;
+  max-width: 740px;
+  height: 100%;
+  min-height: 100vh;
+  padding-top: 32px;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.main-logo {
+  max-width: 100%;
+}
+
+.main-text {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main-text-container {
+  text-align: center;
+  font-family: FreeSerifBold, serif;
+  letter-spacing: 1px;
+  color: var(--grey);
+}
+
+.main-text-container p {
+  margin: 0;
+}
+
+.main-text-header {
+  font-size: calc(12px + (34 - 12) * ((100vw - 320px) / (740 - 320)));
+}
+
+.dots {
+  letter-spacing: 6px;
+  font-family: FreeSerif, serif;
+  padding: 8px;
+}
+
+.main-subtext {
+  font-family: FreeSerif, serif;
+  font-size: calc(8px + (30 - 8) * ((100vw - 320px) / (740 - 320)));
+}
+
+.subtext-a {
+  padding-left: 50px;
+  text-align: left;
+}
+
+.subtext-b {
+  padding-right: 50px;
+  text-align: right;
+}
+
+@media (min-width: 740px) {
+  .main-text-header {
+    font-size: 34px;
+  }
+
+  .main-subtext {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 320px) {
+  .main-text-header {
+    font-size: 12px;
+  }
+
+  .main-subtext {
+    font-size: 8px;
+  }
+}
+
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
