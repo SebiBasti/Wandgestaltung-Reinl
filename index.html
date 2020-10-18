@@ -19,21 +19,92 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
 
-<!--  custom fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500&display=swap" rel="stylesheet">
-
   <meta name="theme-color" content="#fafafa">
 </head>
 
 <body>
-
   <div class="content">
     <img class="logo" src="img/Logo_2.svg" alt="Logo & Schriftzug Wandgestaltung Reinl">
+    <div class="slideshow-container">
+      <ul id="slides">
+        <img class="slide-dummy" src="img/header_slideshow/slideshow_dummy_1.jpg" alt="">
+        <li class="slide showing">
+          <a class="slideshow-image-container" href="#youtube-1" onclick="previewOn()">
+            <img class="slideshow-image" src="img/header_slideshow/youtube_campus_1.JPG" alt="Bild Youtube Campus 1">
+          </a>
+          <div class="lightbox-target" id="youtube-1">
+            <div class="image-fullscreen">
+              <img src="img/header_slideshow/youtube_campus_1.JPG" alt="Bild Youtube Campus 1">
+              <a class="lightbox-close" href="#!" onclick="previewOff()"></a>
+            </div>
+          </div>
+        </li>
+        <li class="slide">
+          <a class="slideshow-image-container" href="#youtube-2" onclick="previewOn()">
+            <img class="slideshow-image" src="img/header_slideshow/youtube_campus_2.JPG" alt="Bild Youtube Campus 2">
+          </a>
+          <div class="lightbox-target" id="youtube-2">
+            <div class="image-fullscreen">
+              <img src="img/header_slideshow/youtube_campus_2.JPG" alt="Bild Youtube Campus 2">
+              <a class="lightbox-close" href="#!" onclick="previewOff()"></a>
+            </div>
+          </div>
+        </li>
+        <li class="slide">
+          <a class="slideshow-image-container" href="#youtube-3" onclick="previewOn()">
+            <img class="slideshow-image" src="img/header_slideshow/youtube_campus_3.JPG" alt="Bild Youtube Campus 3">
+          </a>
+          <div class="lightbox-target" id="youtube-3">
+            <div class="image-fullscreen">
+              <img src="img/header_slideshow/youtube_campus_3.JPG" alt="Bild Youtube Campus 3">
+              <a class="lightbox-close" href="#!" onclick="previewOff()"></a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
   </div>
 
 
 <!--  <p>•••</p>-->
 
+  <script>
+    const slides = document.querySelectorAll('#slides .slide');
+    let currentSlide = 0;
+    let preview = false;
+
+    function slideInterval() {
+      setInterval(nextSlide, 5000);
+    }
+    slideInterval();
+
+    function nextSlide() {
+      if (!preview) {
+        slides[currentSlide].className = 'slide';
+        currentSlide = (currentSlide+1)%slides.length;
+        slides[currentSlide].className = 'slide showing';
+      }
+    }
+
+    function previewOn() {
+      preview = true;
+    }
+
+    function previewOff() {
+      preview = false;
+    }
+
+  //  Scroll Snippet
+  //   const scrollElement = document.documentElement;
+  //   sessionStorage.setItem('body-scroll', scrollElement.scrollTop);
+  //   if (sessionStorage.getItem('body-scroll') !== null) {
+  //     window.setTimeout(() => {
+  //       scrollElement.scrollTop = parseInt(sessionStorage.getItem('body-scroll'), 10);
+  //     }, 5)
+  //   }
+
+
+  </script>
 
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
@@ -41,3 +112,4 @@
 </body>
 
 </html>
+
