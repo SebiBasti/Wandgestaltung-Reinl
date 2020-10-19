@@ -87,11 +87,18 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/*Fonts*/
+
+:root {
+  --text-font: Verdana, sans-serif;
+}
+
 /*Colors*/
 
 :root {
   --white: rgb(229,229,229);
   --grey: rgb(69,69,69);
+  --black: rgb(18,18,18);
 }
 
 body {
@@ -113,6 +120,57 @@ body {
   max-width: 90%;
   height: auto;
   margin: 5%;
+}
+
+.contact {
+  display: flex;
+  /*justify-content: space-around;*/
+}
+
+.contact-item {
+  display: flex;
+  margin: 0 0 0 5%;
+  text-decoration: none;
+}
+
+.contact-item:hover .contact-icon {
+  stroke: var(--black);
+}
+
+.contact-icon {
+  flex-shrink: 0;
+  width: 9vw;
+  min-width: 30px;
+  max-width: 60px;
+}
+
+.contact-text {
+  margin: auto 3%;
+  font-family: var(--text-font);
+  color: var(--grey);
+  white-space: nowrap;
+}
+
+@media (max-width: 739px) {
+  .contact {
+    display: grid;
+  }
+  .contact-text {
+    font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (740 - 320)));
+  }
+  .contact-icon {
+    width: calc(30px + (60 - 30) * ((100vw - 320px) / (740 - 320)));;
+  }
+}
+
+@media (min-width: 740px) {
+  .contact-text {
+    font-size: 20px;
+  }
+}
+
+.contact-item:hover .contact-text {
+  color: var(--black);
 }
 
 #slides {
