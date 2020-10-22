@@ -19,15 +19,12 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
 
-<!--  Custom Fonts-->
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500;600&display=swap" rel="stylesheet">
-
   <meta name="theme-color" content="#fafafa">
 </head>
 
 <body>
   <div class="content">
-    <object type="image/svg+xml" class="logo" data="img/Logo_2.svg" alt="Logo & Schriftzug Wandgestaltung Reinl"></object>
+    <img class="logo" src="img/Logo_2.svg" alt="Logo & Schriftzug Wandgestaltung Reinl">
     <div class="contact">
       <a class="contact-item" href="tel:+49-179-111-0046">
         <svg xmlns="http://www.w3.org/2000/svg" class="contact-icon" viewBox="0 0 24 24" stroke-width="1.5" stroke="#454545" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -61,60 +58,58 @@
         <p>- netter Schnack inklusive</p>
       </div>
     </div>
-
-<!--    <div class="history-container">-->
-<!--      <div class="history-dates">-->
-<!--        <p>1992 - 1995</p>-->
-<!--        <p>1995 - 2005</p>-->
-<!--        <p>2005</p>-->
-<!--        <p>2009</p>-->
-<!--        <p>seit 2010</p>-->
-<!--      </div>-->
-<!--      <div class="history-points">-->
-<!--        <p>Lehre zum Maler- und Lackierer</p>-->
-<!--        <p>Malergeselle in renommierten Unternehmen</p>-->
-<!--        <p>Firmengründung in Berlin</p>-->
-<!--        <p>Sternenhimmelpartner</p>-->
-<!--        <p>Entwicklung der Designtechnik</p>-->
-<!--      </div>-->
-<!--    </div>-->
-    <div class="slideshow-container">
-      <ul id="slides">
-        <img class="slide-dummy" src="img/header_slideshow/slideshow_dummy_1.jpg" alt="">
-        <li class="slide showing">
-          <a class="slideshow-image-container" href="#youtube-1" onclick="previewOn()">
-            <img class="slideshow-image" src="img/header_slideshow/youtube_campus_1.JPG" alt="Bild Youtube Campus 1">
-          </a>
-          <div class="lightbox-target" id="youtube-1">
-            <div class="image-fullscreen">
-              <img src="img/header_slideshow/youtube_campus_1.JPG" alt="Bild Youtube Campus 1">
-              <a class="lightbox-close" href="#!" onclick="previewOff()"></a>
+    <div class="references-container">
+      <h1 class="references-header">Referenzen:</h1>
+      <div class="references">
+        <div class="references-images-slideshow references-images-1">
+          <img class="references-image" src="img/berlin_ist_schoen_im_sommer/picture_1.jpg" alt="Berlin ist schön im Sommer Bild 1">
+          <div class="references-images-slideshow-text-1" id="slideshow-1">
+            <div class="dummy"></div>
+            <p class="references-images-slideshow-text-1-1">Berlin ist im Sommer schön</p>
+          </div>
+          <div class="references-images-slideshow-active hidden" id="slideshow-1-frame">
+            <div class="references-images-slideshow-active-container">
+              <img class="references-image-slideshow-active" id="image-active-1" src="img/berlin_ist_schoen_im_sommer/picture_1.jpg" alt="Berlin ist schön im Sommer Bild 1">
+              <div class="references-images-slideshow-active-container-menu">
+                <svg xmlns="http://www.w3.org/2000/svg" class="references-icon" viewBox="0 0 24 24" stroke-width="1.5" stroke="#E5E5E5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                  <circle cx="12" cy="12" r="9" />
+                  <line x1="8" y1="12" x2="16" y2="12" />
+                  <line x1="8" y1="12" x2="12" y2="16" />
+                  <line x1="8" y1="12" x2="12" y2="8" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="references-icon" id="slideshow-1-close" viewBox="0 0 24 24" stroke-width="1.5" stroke="#E5E5E5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M10 10l4 4m0 -4l-4 4" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="references-icon" viewBox="0 0 24 24" stroke-width="1.5" stroke="#E5E5E5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                  <circle cx="12" cy="12" r="9" />
+                  <line x1="16" y1="12" x2="8" y2="12" />
+                  <line x1="16" y1="12" x2="12" y2="16" />
+                  <line x1="16" y1="12" x2="12" y2="8" />
+                </svg>
+              </div>
             </div>
           </div>
-        </li>
-        <li class="slide">
-          <a class="slideshow-image-container" href="#youtube-2" onclick="previewOn()">
-            <img class="slideshow-image" src="img/header_slideshow/youtube_campus_2.JPG" alt="Bild Youtube Campus 2">
-          </a>
-          <div class="lightbox-target" id="youtube-2">
-            <div class="image-fullscreen">
-              <img src="img/header_slideshow/youtube_campus_2.JPG" alt="Bild Youtube Campus 2">
-              <a class="lightbox-close" href="#!" onclick="previewOff()"></a>
-            </div>
-          </div>
-        </li>
-        <li class="slide">
-          <a class="slideshow-image-container" href="#youtube-3" onclick="previewOn()">
-            <img class="slideshow-image" src="img/header_slideshow/youtube_campus_3.JPG" alt="Bild Youtube Campus 3">
-          </a>
-          <div class="lightbox-target" id="youtube-3">
-            <div class="image-fullscreen">
-              <img src="img/header_slideshow/youtube_campus_3.JPG" alt="Bild Youtube Campus 3">
-              <a class="lightbox-close" href="#!" onclick="previewOff()"></a>
-            </div>
-          </div>
-        </li>
-      </ul>
+        </div>
+        <div class="references-images-slideshow references-images-slideshow-2">
+          <img class="references-image" src="img/berlin_ist_schoen_im_sommer/picture_1.jpg" alt="Berlin ist schön im Sommer Bild 1">
+        </div>
+        <div class="references-images-slideshow references-images-slideshow-3">
+          <img class="references-image" src="img/berlin_ist_schoen_im_sommer/picture_1.jpg" alt="Berlin ist schön im Sommer Bild 1">
+        </div>
+        <div class="references-images-slideshow references-images-slideshow-4">
+          <img class="references-image" src="img/berlin_ist_schoen_im_sommer/picture_1.jpg" alt="Berlin ist schön im Sommer Bild 1">
+        </div>
+        <div class="references-images-slideshow references-images-slideshow-5">
+          <img class="references-image" src="img/berlin_ist_schoen_im_sommer/picture_1.jpg" alt="Berlin ist schön im Sommer Bild 1">
+        </div>
+        <div class="references-images-slideshow references-images-slideshow-6">
+          <img class="references-image" src="img/berlin_ist_schoen_im_sommer/picture_1.jpg" alt="Berlin ist schön im Sommer Bild 1">
+        </div>
+      </div>
     </div>
   </div>
 
@@ -124,30 +119,19 @@
 <!--  <p>•••</p>-->
 
   <script>
-    const slides = document.querySelectorAll('#slides .slide');
-    let currentSlide = 0;
-    let preview = false;
-
-    function slideInterval() {
-      setInterval(nextSlide, 5000);
-    }
-    slideInterval();
-
-    function nextSlide() {
-      if (!preview) {
-        slides[currentSlide].className = 'slide';
-        currentSlide = (currentSlide+1)%slides.length;
-        slides[currentSlide].className = 'slide showing';
+    function slideShowTrigger(slideshow) {
+      if (slideshow.classList.contains('hidden')) {
+        slideshow.classList.remove('hidden');
+      } else {
+        slideshow.classList.add('hidden');
       }
     }
 
-    function previewOn() {
-      preview = true;
-    }
-
-    function previewOff() {
-      preview = false;
-    }
+    const slideshow1 = document.getElementById('slideshow-1');
+    const slideshow1Frame = document.getElementById('slideshow-1-frame');
+    const slideshow1Close = document.getElementById('slideshow-1-close');
+    slideshow1.addEventListener('click', function(){slideShowTrigger(slideshow1Frame)}, false);
+    slideshow1Close.addEventListener('click', function(){slideShowTrigger(slideshow1Frame)}, false);
 
   //  Scroll Snippet
   //   const scrollElement = document.documentElement;
@@ -168,8 +152,7 @@
 
 <!--TODO:-->
 <!-- - proper url names-->
-<!--document.addEventListener("onclick",-->
+<!--document.addEventListener('click',-->
 <!--window.history.replaceState('','','/'),-->
 <!--false-->
 <!--);-->
-
