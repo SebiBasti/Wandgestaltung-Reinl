@@ -91,6 +91,7 @@ textarea {
 
 :root {
   --text-font: Verdana, sans-serif;
+  font-family: 'Fira Sans', sans-serif;
 }
 
 /*Colors*/
@@ -99,6 +100,9 @@ textarea {
   --white: rgb(229,229,229);
   --grey: rgb(69,69,69);
   --black: rgb(18,18,18);
+  --blue: rgb(0,116,188);
+  --yellow: rgb(255,203,5);
+  --red: rgb(213,34,44);
 }
 
 body {
@@ -124,7 +128,18 @@ body {
 
 .contact {
   display: flex;
-  /*justify-content: space-around;*/
+  position: relative;
+  margin-bottom: 6%;
+}
+
+.contact:after {
+  content: '';
+  width: 90%;
+  left: 5%;
+  height: 2px;
+  background: var(--blue);
+  position: absolute;
+  bottom: -16px;
 }
 
 .contact-item {
@@ -159,7 +174,17 @@ body {
     font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (740 - 320)));
   }
   .contact-icon {
-    width: calc(30px + (60 - 30) * ((100vw - 320px) / (740 - 320)));;
+    width: calc(30px + (60 - 30) * ((100vw - 320px) / (740 - 320)));
+  }
+  .contact:after {
+    bottom: calc(-8px - (16 - 8) * ((100vw - 320px) / (740 - 320)));
+  }
+  .profile-text-header-container {
+    display: grid;
+  }
+  .profile-text-header {
+    font-size: calc(14px + (20 - 14) * ((100vw - 320px) / (740 - 320)));
+    width: max-content;
   }
 }
 
@@ -167,10 +192,79 @@ body {
   .contact-text {
     font-size: 20px;
   }
+  .profile-text-header-container {
+    display: flex;
+  }
+  .profile-text-header {
+    font-size: 20px;
+  }
 }
 
 .contact-item:hover .contact-text {
   color: var(--black);
+}
+
+.profile-container {
+  position: relative;
+  display: flex;
+  margin: 5%;
+  border-bottom: 2px solid var(--blue);
+}
+
+/*.profile-container:after {*/
+/*  content: '';*/
+/*  width: 90%;*/
+/*  left: 5%;*/
+/*  height: 2px;*/
+/*  background: var(--blue);*/
+/*  position: absolute;*/
+/*  bottom: -16px;*/
+/*}*/
+
+.profile-picture {
+  width: 30%;
+  height: max-content;
+  box-shadow: 0px 0px 8px rgba(0,0,0,.3);
+  border-radius: 2px;
+}
+
+.profile-text {
+  padding-left: 5%;
+  font-family: var(--text-font);
+  width: 70%;
+}
+
+.profile-text-header {
+  padding: 0 4px;
+  white-space: nowrap;
+  border-radius: 2px;
+  text-shadow: 1px 1px 8px rgba(229,229,229,0.8);
+}
+
+.profile-text-header-1 {
+  margin: 0;
+  background-color: var(--yellow);
+}
+
+.profile-text-header-2 {
+  margin: 0;
+  background-color: var(--yellow);
+}
+
+.profile-text p {
+  margin: 0;
+}
+
+.history-container {
+  display: flex;
+  margin: 5%;
+  font-family: var(--text-font);
+  font-size: 20px;
+}
+
+.history-dates {
+  margin-right: 5%;
+  white-space: nowrap;
 }
 
 #slides {
