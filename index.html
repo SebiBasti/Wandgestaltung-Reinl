@@ -317,12 +317,12 @@
         const slideshowNewPictureActive = document.getElementById(`slideshow-1-picture-${parseInt(activePictureId.charAt(activePictureId.length - 1)) - 1}`);
         slideshowNewPictureActive.classList.add(`picture-active-${slideshowNumber}`);
       }
-      const backgroundResize = document.getElementsByClassName('references-images-slideshow-active');
-      for (let i = 0; i < backgroundResize.length; i++) {
-        const currentEl = backgroundResize[i];
-        currentEl.style.height = `${window.innerHeight}px`;
-        console.log(i);
-      }
+      // const backgroundResize = document.getElementsByClassName('references-images-slideshow-active');
+      // for (let i = 0; i < backgroundResize.length; i++) {
+      //   const currentEl = backgroundResize[i];
+      //   currentEl.style.height = `${window.innerHeight}px`;
+      //   console.log(i);
+      // }
     }
 
     function slideshowRight(slideshowNumber) {
@@ -338,12 +338,12 @@
         const slideshowNewPictureActive = document.getElementById(`slideshow-${slideshowNumber}-picture-${parseInt(activePictureId.charAt(activePictureId.length - 1)) + 1}`);
         slideshowNewPictureActive.classList.add(`picture-active-${slideshowNumber}`);
       }
-      const backgroundResize = document.getElementsByClassName('references-images-slideshow-active');
-      for (let i = 0; i < backgroundResize.length; i++) {
-        const currentEl = backgroundResize[i];
-        currentEl.style.height = `${window.innerHeight}px`;
-        console.log(i);
-      }
+      // const backgroundResize = document.getElementsByClassName('references-images-slideshow-active');
+      // for (let i = 0; i < backgroundResize.length; i++) {
+      //   const currentEl = backgroundResize[i];
+      //   currentEl.style.height = `${window.innerHeight}px`;
+      //   console.log(i);
+      // }
     }
 
     // Slideshow 1
