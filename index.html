@@ -317,6 +317,12 @@
         const slideshowNewPictureActive = document.getElementById(`slideshow-1-picture-${parseInt(activePictureId.charAt(activePictureId.length - 1)) - 1}`);
         slideshowNewPictureActive.classList.add(`picture-active-${slideshowNumber}`);
       }
+      const backgroundResize = document.getElementsByClassName('references-images-slideshow-active');
+      for (let i = 0; i < backgroundResize.length; i++) {
+        const currentEl = backgroundResize[i];
+        currentEl.style.height = '100vh';
+        console.log(i);
+      }
     }
 
     function slideshowRight(slideshowNumber) {
@@ -331,6 +337,12 @@
         slideshowPictureActive[0].classList.remove(`picture-active-${slideshowNumber}`);
         const slideshowNewPictureActive = document.getElementById(`slideshow-${slideshowNumber}-picture-${parseInt(activePictureId.charAt(activePictureId.length - 1)) + 1}`);
         slideshowNewPictureActive.classList.add(`picture-active-${slideshowNumber}`);
+      }
+      const backgroundResize = document.getElementsByClassName('references-images-slideshow-active');
+      for (let i = 0; i < backgroundResize.length; i++) {
+        const currentEl = backgroundResize[i];
+        currentEl.style.height = '100vh';
+        console.log(i);
       }
     }
 
