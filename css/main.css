@@ -188,6 +188,12 @@ body {
   .references-header {
     font-size: calc(14px + (22 - 14) * ((100vw - 320px) / (800 - 320)));
   }
+  .references {
+    display: inline;
+  }
+  .references-images-slideshow {
+    margin: 2% 5%;
+  }
 }
 
 @media (min-width: 800px) {
@@ -202,6 +208,57 @@ body {
   }
   .references-header {
     font-size: 22px;
+  }
+  .references-images-slideshow-text {
+    font-size: 20px !important;
+  }
+}
+
+@media (min-width: 481px) {
+  .references {
+    display: grid;
+  }
+  .references-images-slideshow {
+    height: calc(160px + (265 - 160) * ((100vw - 480px) / (800 - 480)));
+  }
+  .references-images-slideshow-text {
+    font-size: calc(12px + (20 - 12) * ((100vw - 480px) / (800 - 480)));
+  }
+  /*slideshow 1*/
+  .references-images-1 {
+    margin: 0 2% 2% 0;
+  }
+  /*slideshow 2*/
+  .references-images-2 {
+    margin: 0 0 2% 2%;
+  }
+  /*slideshow 3*/
+  .references-images-3 {
+    margin: 2% 2% 2% 0;
+  }
+  /*slideshow 4*/
+  .references-images-4 {
+    margin: 2% 0 2% 2%;
+  }
+  /*slideshow 5*/
+  .references-images-5 {
+    margin: 2% 2% 0 0;
+  }
+  /*slideshow 6*/
+  .references-images-6 {
+    margin: 2% 0 0 2%;
+  }
+}
+
+@media (max-width: 480px) {
+  .references-container:after {
+    bottom: 0 !important;
+  }
+  .references-images-slideshow {
+    height: calc(215px + (320 - 215) * ((100vw - 320px) / (480 - 320)));
+  }
+  .references-images-slideshow-text {
+    font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (480 - 320)));
   }
 }
 
@@ -281,15 +338,14 @@ body {
 }
 
 .references {
-  display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 30% 30% 30%;
   margin: 5%;
 }
 
 .references-images-slideshow {
-  height: 250px;
   box-shadow: 0px 0px 8px rgba(18,18,18,.5);
+  max-height: 265px;
 }
 
 .references-image {
@@ -362,7 +418,6 @@ body {
 
 /*slideshow 1*/
 .references-images-1 {
-  margin: 0 2% 2% 0;
   position: relative;
 }
 
@@ -372,7 +427,6 @@ body {
 
 /*slideshow 2*/
 .references-images-2 {
-  margin: 0 0 2% 2%;
   position: relative;
 }
 
@@ -382,7 +436,6 @@ body {
 
 /*slideshow 3*/
 .references-images-3 {
-  margin: 2% 2% 2% 0;
   position: relative;
 }
 
@@ -392,7 +445,6 @@ body {
 
 /*slideshow 4*/
 .references-images-4 {
-  margin: 2% 0 2% 2%;
   position: relative;
 }
 
@@ -402,7 +454,6 @@ body {
 
 /*slideshow 5*/
 .references-images-5 {
-  margin: 2% 2% 0 0;
   position: relative;
 }
 
@@ -412,7 +463,6 @@ body {
 
 /*slideshow 6*/
 .references-images-6 {
-  margin: 2% 0 0 2%;
   position: relative;
 }
 
