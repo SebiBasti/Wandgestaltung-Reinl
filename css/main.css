@@ -383,7 +383,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: auto;
+  height: 2000px;
   background-color: rgba(18,18,18,0.8);
   z-index: 1;
 }
