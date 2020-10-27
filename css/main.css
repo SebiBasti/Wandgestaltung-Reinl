@@ -251,6 +251,9 @@ body {
 }
 
 @media (max-width: 480px) {
+  .profile-text-container {
+    font-size: calc(14px + (20 - 12) * ((100vw - 320px) / (480 - 320)));
+  }
   .references-container:after {
     bottom: 0 !important;
   }
@@ -275,8 +278,8 @@ body {
 }
 
 .profile-picture {
-  width: 30%;
-  height: max-content;
+  width: 26.5%;
+  object-fit: cover;
   box-shadow: 0px 0px 8px rgb(18,18,18);
   border-radius: 2px;
 }
@@ -288,6 +291,10 @@ body {
 }
 
 .profile-text-header-container {
+
+}
+
+.profile-text-container {
 
 }
 
@@ -307,6 +314,10 @@ body {
 .profile-text-header-2 {
   margin: 0;
   background-color: var(--yellow);
+}
+
+.profile-text-header-b {
+  margin: 5% 0 2.5% 0;
 }
 
 .profile-text p {
@@ -339,7 +350,6 @@ body {
 
 .references {
   grid-template-columns: 50% 50%;
-  grid-template-rows: 30% 30% 30%;
   margin: 5%;
 }
 
@@ -393,25 +403,32 @@ body {
   width: 100vw;
   display: grid;
   align-content: center;
+  justify-content: center;
+  padding: 1vw;
 }
 
 .references-image-slideshow-active {
-  max-height: 95%;
-  max-width: 95%;
+  min-height: 98%;
+  max-height: 98%;
+  min-width: 98%;
+  max-width: 98%;
   object-fit: contain;
-  margin: 1% auto 0 auto;
   display: none;
 }
 
 .references-images-slideshow-active-container-menu {
   display: flex;
-  margin: 1% auto;
-  width: max-content;
+  margin: 1% auto 2% auto;
+  /*width: max-content;*/
 }
 
 .references-icon {
   width: 50px;
-  margin: 0 32px;
+  margin: 0 24px;
+}
+
+.reference-icon-first {
+  margin-left: calc(24px - 2vw);
 }
 
 /*repetitive css from here*/
