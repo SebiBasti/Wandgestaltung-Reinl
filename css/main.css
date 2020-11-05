@@ -126,13 +126,12 @@ body {
 .logo {
   max-width: 90%;
   height: auto;
-  margin: 5%;
+  margin: 5% 5% 16px;
 }
 
 .contact {
   display: flex;
   position: relative;
-  margin-bottom: 6%;
 }
 
 .contact:after {
@@ -142,7 +141,7 @@ body {
   height: 2px;
   background: var(--blue);
   position: absolute;
-  bottom: -16px;
+  bottom: -10px;
 }
 
 .contact-item {
@@ -158,7 +157,7 @@ body {
 
 .contact-icon {
   flex-shrink: 0;
-  width: 9vw;
+  width: 60px;
   min-width: 30px;
   max-width: 60px;
 }
@@ -168,6 +167,7 @@ body {
   font-family: var(--text-font);
   color: var(--grey);
   white-space: nowrap;
+  font-size: 22px;
 }
 
 .contact-item:hover .contact-text {
@@ -178,22 +178,22 @@ body {
   position: relative;
   display: flex;
   align-items: flex-start;
-  margin: 5% 5% 3% 5%;
-  padding-bottom: 4%;
+  margin: 24px 5% 16px 5%;
+  padding-bottom: 16px;
   border-bottom: 2px solid var(--blue);
 }
 
 .profile-picture {
-  width: 26.5%;
+  width: 250px;
   object-fit: cover;
   box-shadow: 0px 0px 8px rgb(18,18,18);
   border-radius: 2px;
+  flex-shrink: 0;
 }
 
 .profile-text {
-  padding-left: 5%;
+  padding-left: 16px;
   font-family: var(--text-font);
-  width: 70%;
 }
 
 .profile-text-header {
@@ -202,6 +202,7 @@ body {
   border-radius: 2px;
   text-shadow: 1px 1px 8px rgba(229,229,229,0.8);
   width: max-content;
+  font-size: 20.4px;
 }
 
 .profile-text-header-1 {
@@ -215,7 +216,21 @@ body {
 }
 
 .profile-text-header-b {
-  margin: 5% 0 2.5% 0;
+  margin: 16px 0 8px 0;
+  font-size: 16px;
+}
+
+.profile-text-header-b-sub {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: var(--red);
+  padding-bottom: 4px;
+}
+
+.profile-text-points {
+  font-style: italic;
+  padding-bottom: 4px;
+  font-size: 14px;
 }
 
 .profile-text p {
@@ -244,17 +259,19 @@ body {
   background-color: var(--yellow);
   border-radius: 2px;
   text-shadow: 1px 1px 8px rgba(229,229,229,0.8);
+  font-size: 22px;
 }
 
 .references {
   grid-template-columns: 50% 50%;
-  margin: 5%;
+  /*margin: 5%;*/
 }
 
 .references-images-slideshow {
   box-shadow: 0px 0px 8px rgba(18,18,18,.5);
   max-height: 265px;
   position: relative;
+  margin: 5% 5%;
 }
 
 .references-image {
@@ -280,43 +297,11 @@ body {
 .references-images-slideshow-text {
   margin: 0;
   padding-top: 4%;
-  background-color: var(--red);
   font-family: var(--text-font);
   font-weight: bold;
-  text-shadow: 1px 1px 8px rgba(229,229,229,0.3);
+  text-shadow: 1px 1px 4px rgb(229,229,229);
   border-radius: 2px 0;
-}
-
-/*repetitive css from here*/
-
-/*slideshow 1*/
-.picture-active-1 {
-  display: block !important;
-}
-
-/*slideshow 2*/
-.picture-active-2 {
-  display: block !important;
-}
-
-/*slideshow 3*/
-.picture-active-3 {
-  display: block !important;
-}
-
-/*slideshow 4*/
-.picture-active-4 {
-  display: block !important;
-}
-
-/*slideshow 5*/
-.picture-active-5 {
-  display: block !important;
-}
-
-/*slideshow 6*/
-.picture-active-6 {
-  display: block !important;
+  font-size: 20px;
 }
 
 /*Slickshow*/
@@ -392,56 +377,86 @@ body {
 
 /*media queries*/
 
+/*contact*/
+
 @media (max-width: 799px) {
   .contact {
     display: grid;
   }
   .contact-text {
-    font-size: calc(16px + (22 - 16) * ((100vw - 320px) / (800 - 320)));
+    font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (800 - 320)));
   }
   .contact-icon {
     width: calc(30px + (60 - 30) * ((100vw - 320px) / (800 - 320)));
   }
-  .contact:after {
-    bottom: calc(-8px - (16 - 8) * ((100vw - 320px) / (800 - 320)));
-  }
-  .profile-text-header-container {
+}
+
+/*profile*/
+
+@media (max-width: 480px) {
+  .profile-container {
     display: grid;
+
+  }
+  .profile-picture {
+    width: 100%;
+    height: calc(288px + (432 - 288) * ((100vw - 320px) / (480 - 320)));
+    object-position: top;
+  }
+  .profile-text {
+    width: unset;
+    padding: 0;
+    margin-top: 16px;
   }
   .profile-text-header {
-    font-size: calc(14px + (22 - 14) * ((100vw - 320px) / (800 - 320)));
-    width: max-content;
+    font-size: 17.7px;
   }
-  .references-header {
-    font-size: calc(14px + (22 - 14) * ((100vw - 320px) / (800 - 320)));
+}
+
+@media (min-width: 481px) and (max-width: 799px) {
+  .profile-picture {
+    width: calc(175px + (250 - 175) * ((100vw - 481px) / (800 - 481)));
+    height: calc(455px + (445 - 455) * ((100vw - 481px) / (800 - 481)));
   }
-  .references {
-    display: inline;
+  .profile-text-header {
+    font-size: calc(14.5px + (17.7 - 14.5) * ((100vw - 481px) / (800 - 481)));
   }
-  .references-images-slideshow {
-    margin: 2% 5%;
+  .profile-text-header-b {
+    font-size: calc(14px + (16 - 14) * ((100vw - 481px) / (800 - 481)));
+  }
+  .profile-text-header-b-sub {
+    font-size: calc(14px + (16 - 14) * ((100vw - 481px) / (800 - 481)));
+  }
+  .profile-text-points {
+    font-size: calc(14px + (16 - 14) * ((100vw - 481px) / (800 - 481)));
   }
 }
 
 @media (min-width: 800px) {
-  .contact-text {
-    font-size: 22px;
-  }
   .profile-text-header-container {
     display: flex;
   }
-  .profile-text-header {
-    font-size: 22px;
+}
+
+/*references*/
+
+@media (max-width: 480px) {
+  .references {
+    display: inline;
   }
   .references-header {
-    font-size: 22px;
+    font-size: 17.7px;
+  }
+  .references-images-slideshow {
+    height: calc(215px + (320 - 215) * ((100vw - 320px) / (480 - 320)));
+    margin: 16px 5%;
   }
   .references-images-slideshow-text {
-    font-size: 20px !important;
+    font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (480 - 320)));
   }
 }
 
-@media (min-width: 481px) {
+@media (min-width: 481px) and (max-width: 799px) {
   .references {
     display: grid;
   }
@@ -455,6 +470,14 @@ body {
   .references-images-1 {
     margin: 0 2% 2% 0;
   }
+}
+
+/*tablet*/
+
+@media (min-width: 481px) and (max-width: 799px) {
+
+
+
   /*slideshow 2*/
   .references-images-2 {
     margin: 0 0 2% 2%;
@@ -477,20 +500,17 @@ body {
   }
 }
 
-@media (max-width: 480px) {
-  .profile-text-container {
-    font-size: calc(14px + (20 - 12) * ((100vw - 320px) / (480 - 320)));
-  }
-  .references-container:after {
-    bottom: 0 !important;
-  }
-  .references-images-slideshow {
-    height: calc(215px + (320 - 215) * ((100vw - 320px) / (480 - 320)));
-  }
-  .references-images-slideshow-text {
-    font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (480 - 320)));
-  }
+@media (min-width: 481px) {
+
 }
+
+@media (max-width: 799px) {
+  /*.references-header {*/
+  /*  font-size: calc(16px + (22 - 16) * ((100vw - 320px) / (800 - 320)));*/
+  /*}*/
+}
+
+
 
 /* ==========================================================================
    Helper classes
