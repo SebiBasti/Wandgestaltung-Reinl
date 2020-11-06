@@ -341,6 +341,7 @@ body {
   top: 0;
   width: 96vw;
   height: 96vh;
+  height: calc((var(--vh, 1vh) * 100) - 4vh);
   padding: 2vh 2vw;
   background-color: rgba(18,18,18,0.9);
   z-index: 2;
