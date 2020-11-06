@@ -344,18 +344,10 @@ body {
   padding: 2vh 2vw;
   background-color: rgba(18,18,18,0.9);
   z-index: 2;
-  overflow: hidden;
-  margin: 0;
-}
-
-.scroll-fix {
-  margin: 0;
-  height: 100%;
-  overflow: hidden;
 }
 
 .slickshow {
-  height: calc(96vh - 66px);
+  height: calc(96vh - 130px);
   width: 96vw;
 }
 
@@ -371,7 +363,7 @@ body {
 }
 
 .slider-controls {
-  position: fixed;
+  /*position: fixed;*/
   margin: 8px auto;
   bottom: 0;
   left: 0;
@@ -379,6 +371,7 @@ body {
   width: max-content;
   display: flex;
   height: 50px;
+  padding-bottom: 80px;
 }
 
 .slick-dots {
