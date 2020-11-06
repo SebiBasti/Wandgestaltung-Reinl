@@ -345,9 +345,15 @@ body {
   padding: 2vh 2vw;
   background-color: rgba(18,18,18,0.9);
   z-index: 2;
+  overflow: hidden;
+  margin: 0;
 }
 
-html, body {margin: 0; height: 100%; overflow: hidden}
+.scroll-fix {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
 
 .slickshow {
   height: calc(96vh - 66px);
