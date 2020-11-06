@@ -278,7 +278,7 @@ body {
   border-radius: 2px;
   width: max-content;
   max-width: 100%;
-  height: max-content;
+  /*height: max-content;*/
   max-height: 100%;
   object-fit: cover;
 }
