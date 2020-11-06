@@ -492,15 +492,6 @@
     slideshow6.addEventListener('click', function(){slideShowTrigger(slideshow6Frame)}, false);
     slideshow6Close.addEventListener('click', function(){slideShowTrigger(slideshow6Frame)}, false);
 
-  //  body scroll blocker - source: https://medium.com/jsdownunder/locking-body-scroll-for-all-devices-22def9615177
-    function scrollBlocker() {
-      var el = document.body;
-      el.ontouchend = (e) => {
-        e.preventDefault();
-      };
-    }
-    scrollBlocker();
-
   </script>
 
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
