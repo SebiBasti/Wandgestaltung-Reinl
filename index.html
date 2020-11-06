@@ -365,14 +365,16 @@
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script type="text/javascript" src="js/vendor/bodyScrollLock.min.js"></script>
 
   <script>
     function slideShowTrigger(slideshow) {
       if (slideshow.classList.contains('hidden-z-index')) {
         slideshow.classList.remove('hidden-z-index');
+        bodyScrollLock.disableBodyScroll(slideshow);
       } else {
         slideshow.classList.add('hidden-z-index');
-        console.log(slideshow);
+        bodyScrollLock.enableBodyScroll(slideshow);
       }
     }
 
@@ -491,9 +493,13 @@
     slideshow6Close.addEventListener('click', function(){slideShowTrigger(slideshow6Frame)}, false);
 
   //  body scroll blocker - source: https://medium.com/jsdownunder/locking-body-scroll-for-all-devices-22def9615177
-    document.body.ontouchend = (e) => {
-      e.preventDefault();
-    };
+    function scrollBlocker() {
+      var el = document.body;
+      el.ontouchend = (e) => {
+        e.preventDefault();
+      };
+    }
+    scrollBlocker();
 
   </script>
 
