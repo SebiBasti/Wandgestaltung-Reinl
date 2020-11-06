@@ -239,6 +239,7 @@ body {
 
 .references-container {
   position: relative;
+  padding: 0 5%;
 }
 
 .references-container:after {
@@ -248,30 +249,29 @@ body {
   height: 2px;
   background: var(--blue);
   position: absolute;
-  bottom: -32px;
+  bottom: -2px;
 }
 
 .references-header {
   width: max-content;
   font-family: var(--text-font);
-  margin: 0 0 0 5%;
+  margin: 0;
   padding: 0 4px;
   background-color: var(--yellow);
   border-radius: 2px;
   text-shadow: 1px 1px 8px rgba(229,229,229,0.8);
-  font-size: 22px;
+  font-size: 17.7px;
 }
 
 .references {
+  display: grid;
   grid-template-columns: 50% 50%;
-  /*margin: 5%;*/
 }
 
 .references-images-slideshow {
   box-shadow: 0px 0px 8px rgba(18,18,18,.5);
-  max-height: 265px;
+  max-height: 260px;
   position: relative;
-  margin: 5% 5%;
 }
 
 .references-image {
@@ -302,6 +302,33 @@ body {
   text-shadow: 1px 1px 4px rgb(229,229,229);
   border-radius: 2px 0;
   font-size: 20px;
+}
+
+/*repetitive image css*/
+
+/*slideshow 1*/
+.references-images-1 {
+  margin: 16px 8px 8px 0;
+}
+/*slideshow 2*/
+.references-images-2 {
+  margin: 16px 0 8px 8px;
+}
+/*slideshow 3*/
+.references-images-3 {
+  margin: 8px 8px 8px 0;
+}
+/*slideshow 4*/
+.references-images-4 {
+  margin: 8px 0 8px 8px;
+}
+/*slideshow 5*/
+.references-images-5 {
+  margin: 8px 8px 16px 0;
+}
+/*slideshow 6*/
+.references-images-6 {
+  margin: 8px 0 16px 8px;
 }
 
 /*Slickshow*/
@@ -375,6 +402,45 @@ body {
   border-radius: 50%;
 }
 
+/*history*/
+
+.history-container {
+  margin: 18px 5%;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--blue);
+}
+
+.history-header {
+  width: max-content;
+  margin: 0 0 4px;
+  padding: 0 4px;
+  background-color: var(--yellow);
+  font-family: var(--text-font);
+  font-size: 17.7px;
+}
+
+.history-flex {
+  display: flex;
+}
+
+.history-flex p {
+  margin: 4px 0;
+}
+
+.history-dates {
+  width: 115px;
+  font-family: var(--text-font);
+  font-size: 16px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.history-info {
+  font-family: var(--text-font);
+  font-size: 16px;
+  padding-left: 16px;
+}
+
 /*media queries*/
 
 /*contact*/
@@ -419,7 +485,7 @@ body {
     height: calc(455px + (445 - 455) * ((100vw - 481px) / (800 - 481)));
   }
   .profile-text-header {
-    font-size: calc(14.5px + (17.7 - 14.5) * ((100vw - 481px) / (800 - 481)));
+    font-size: calc(17.3px + (17.7 - 17.3) * ((100vw - 481px) / (800 - 481)));
   }
   .profile-text-header-b {
     font-size: calc(14px + (16 - 14) * ((100vw - 481px) / (800 - 481)));
@@ -444,12 +510,9 @@ body {
   .references {
     display: inline;
   }
-  .references-header {
-    font-size: 17.7px;
-  }
   .references-images-slideshow {
     height: calc(215px + (320 - 215) * ((100vw - 320px) / (480 - 320)));
-    margin: 16px 5%;
+    margin: 16px 0;
   }
   .references-images-slideshow-text {
     font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (480 - 320)));
@@ -457,60 +520,26 @@ body {
 }
 
 @media (min-width: 481px) and (max-width: 799px) {
-  .references {
-    display: grid;
-  }
   .references-images-slideshow {
-    height: calc(160px + (265 - 160) * ((100vw - 480px) / (800 - 480)));
+    height: calc(155px + (260 - 155) * ((100vw - 480px) / (800 - 480)));
   }
   .references-images-slideshow-text {
     font-size: calc(12px + (20 - 12) * ((100vw - 480px) / (800 - 480)));
-  }
-  /*slideshow 1*/
-  .references-images-1 {
-    margin: 0 2% 2% 0;
+  /*  FIXME*/
   }
 }
 
-/*tablet*/
+/*history*/
 
-@media (min-width: 481px) and (max-width: 799px) {
-
-
-
-  /*slideshow 2*/
-  .references-images-2 {
-    margin: 0 0 2% 2%;
+@media (max-width: 480px) {
+  .history-dates {
+    width: calc(100px + (115 - 100) * ((100vw - 320px) / (480 - 320)));;
+    font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (480 - 320)));
   }
-  /*slideshow 3*/
-  .references-images-3 {
-    margin: 2% 2% 2% 0;
-  }
-  /*slideshow 4*/
-  .references-images-4 {
-    margin: 2% 0 2% 2%;
-  }
-  /*slideshow 5*/
-  .references-images-5 {
-    margin: 2% 2% 0 0;
-  }
-  /*slideshow 6*/
-  .references-images-6 {
-    margin: 2% 0 0 2%;
+  .history-info {
+    font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (480 - 320)));
   }
 }
-
-@media (min-width: 481px) {
-
-}
-
-@media (max-width: 799px) {
-  /*.references-header {*/
-  /*  font-size: calc(16px + (22 - 16) * ((100vw - 320px) / (800 - 320)));*/
-  /*}*/
-}
-
-
 
 /* ==========================================================================
    Helper classes
