@@ -490,19 +490,11 @@
     slideshow6.addEventListener('click', function(){slideShowTrigger(slideshow6Frame)}, false);
     slideshow6Close.addEventListener('click', function(){slideShowTrigger(slideshow6Frame)}, false);
 
-    // $(document).ready(function(){
-    //   $('.slickshow').css('height', $(window).height() + 'px');
-    // });
+  //  body scroll blocker - source: https://medium.com/jsdownunder/locking-body-scroll-for-all-devices-22def9615177
+    document.body.ontouchend = (e) => {
+      e.preventDefault();
+    };
 
-
-  //  Scroll Snippet
-  //   const scrollElement = document.documentElement;
-  //   sessionStorage.setItem('body-scroll', scrollElement.scrollTop);
-  //   if (sessionStorage.getItem('body-scroll') !== null) {
-  //     window.setTimeout(() => {
-  //       scrollElement.scrollTop = parseInt(sessionStorage.getItem('body-scroll'), 10);
-  //     }, 5)
-  //   }
   </script>
 
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
