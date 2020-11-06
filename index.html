@@ -383,7 +383,7 @@
     Array.from(slickshow).forEach(function (el) {
       el.addEventListener('touchmove', function() {
         const newHeight = window.innerHeight + 'px';
-        slickshow.style.height = newHeight;
+        el.style.height = newHeight;
         console.log("horay");
       }, false);
     })
