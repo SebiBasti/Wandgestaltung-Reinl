@@ -347,6 +347,8 @@ body {
   z-index: 2;
 }
 
+html, body {margin: 0; height: 100%; overflow: hidden}
+
 .slickshow {
   height: calc(96vh - 66px);
   width: 96vw;
