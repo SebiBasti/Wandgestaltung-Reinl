@@ -371,11 +371,11 @@
     function slideShowTrigger(slideshow) {
       if (slideshow.classList.contains('hidden-z-index')) {
         slideshow.classList.remove('hidden-z-index');
-        // bodyScrollLock.disableBodyScroll(slideshow);
+        bodyScrollLock.disableBodyScroll(slideshow);
 
       } else {
         slideshow.classList.add('hidden-z-index');
-        // bodyScrollLock.enableBodyScroll(slideshow);
+        bodyScrollLock.enableBodyScroll(slideshow);
       }
     }
 
