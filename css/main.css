@@ -279,7 +279,7 @@ body {
   width: max-content;
   max-width: 100%;
   /*height: max-content;*/
-  max-height: 100%;
+  max-height: inherit;
   object-fit: cover;
 }
 
