@@ -381,6 +381,9 @@ body {
   bottom: 0 !important;
   height: 100%;
   align-items: center;
+  max-width: calc(100vw - 115px);
+  flex-flow: row wrap;
+  justify-content: center;
 }
 
 .slick-dots li button:before {
