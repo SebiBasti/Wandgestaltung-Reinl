@@ -105,6 +105,8 @@ textarea {
 
 body {
   background-color: rgb(38,38,38);
+  -webkit-tap-highlight-color: rgba(0,0,0,0) !important; /*tap fix for Samsung Browser*/
+  -webkit-tap-highlight-color: transparent !important;
 }
 
 .background {
