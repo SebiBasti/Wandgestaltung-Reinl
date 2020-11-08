@@ -438,6 +438,29 @@ body {
   padding-left: 16px;
 }
 
+/*partnerlinks*/
+
+.partnerlinks {
+  margin: 16px 5%;
+}
+
+.partnerlinks-header {
+  width: max-content;
+  margin: 0;
+  padding: 0 4px;
+  background-color: var(--yellow);
+  font-family: var(--text-font);
+  font-size: 17.7px;
+}
+
+.partnerlinks-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 16px 0;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--blue);
+}
+
 /*media queries*/
 
 /*contact*/
