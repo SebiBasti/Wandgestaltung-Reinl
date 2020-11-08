@@ -188,6 +188,8 @@ body {
   box-shadow: 0px 0px 8px rgb(18,18,18);
   border-radius: 2px;
   flex-shrink: 0;
+  image-rendering: -webkit-optimize-contrast; /*chrome blurry image fix*/
+  /*  source: https://stackoverflow.com/questions/37906602/blurry-downscaled-images-in-chrome*/
 }
 
 .profile-text {
@@ -356,6 +358,7 @@ body {
 .slick-slide {
   object-fit: contain;
   outline: none;
+  image-rendering: -webkit-optimize-contrast; /*chrome blurry image fix*/
 }
 
 .slick-list,
