@@ -201,12 +201,12 @@ body {
 }
 
 .profile-text-header {
-  padding: 0 4px;
-  white-space: nowrap;
+  /*padding: 0 4px;*/
+  white-space: pre;
   border-radius: 2px;
   text-shadow: 1px 1px 8px rgba(229,229,229,0.8);
   width: max-content;
-  font-size: 20.4px;
+  font-size: 20.9px;
 }
 
 .profile-text-header-1 {
