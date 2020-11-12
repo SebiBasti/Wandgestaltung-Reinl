@@ -174,7 +174,7 @@ body {
 
 .contact-text-mobile {
   display: flex;
-  color: rgba(69,69,69,0.75);;
+  color: rgba(69,69,69,0.75);
   font-family: var(--text-font);
   font-style: italic;
   font-size: 12px;
@@ -183,6 +183,10 @@ body {
 
 .contact-text-mobile-1 {
   padding-right: 8px;
+}
+
+.contact-text-mobile-2 {
+  color: rgba(69,69,69,0.75);
 }
 
 .contact-item:hover .contact-text {
@@ -518,6 +522,12 @@ body {
   }
 }
 
+@media (min-width: 800px) {
+  .contact-text-mobile {
+    display: none;
+  }
+}
+
 /*profile*/
 
 @media (max-width: 480px) {
@@ -561,9 +571,6 @@ body {
 @media (min-width: 800px) {
   .profile-text-header-container {
     display: flex;
-  }
-  .contact-text-mobile {
-    display: none;
   }
 }
 
